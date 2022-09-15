@@ -1,0 +1,124 @@
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #85888C;
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+nav {
+    background-color: rgb(56, 116, 56);
+    box-shadow: 0px 0px 6px 6px rgb(68, 68, 68);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 15px;
+    padding-top: 35px;
+    text-decoration: none;
+    color: rgb(118, 118, 118);
+    font-size: 1.3rem;
+}
+
+nav .mainMenu li a:hover{
+    color: rgb(49, 49, 49);
+}
+
+nav .openMenu{
+    font-size: 2rem;
+    margin: 20px;
+    margin-top: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+
+nav .openMenu, .closeMenu, .icons i{
+    font-size:2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo{
+    margin: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    min-width:200px;
+    max-width:270px;
+    display: flex;
+}
+
+
+@media(max-width: 1088px){
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu{
+        display:block;
+    }
+    nav .mainMenu li a:hover{
+        background: none;
+        color: rgb(45, 45, 45);
+        font-size: 1.6rem;
+    }
+}
+
+/* logo beuty */
+.degrade{
+    display: inline-block;
+    background-image: linear-gradient(to right,#ff0000,#0000ff);
+    background-size:auto;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+}
