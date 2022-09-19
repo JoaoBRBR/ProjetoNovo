@@ -29,9 +29,9 @@ ul{
 }
 
 nav {
-    background-color: rgb(56, 116, 56);
-    box-shadow: 0px 0px 6px 6px rgb(68, 68, 68);
-    color: rgb(0, 0, 0);
+    background-color: #18386a;
+    box-shadow: 0px 0px 6px 6px #ccff66;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
 }
@@ -44,14 +44,15 @@ nav .mainMenu {
 nav .mainMenu li a{
     display: inline-block;
     padding: 15px;
-    padding-top: 35px;
+    padding-top: 30px;
     text-decoration: none;
-    color: rgb(118, 118, 118);
-    font-size: 1.3rem;
+    color: #ccff66;
+    font-weight: bold;
+    font-size: 1.7rem;
 }
 
 nav .mainMenu li a:hover{
-    color: rgb(49, 49, 49);
+    color: #ffffff;
 }
 
 nav .openMenu{
@@ -70,17 +71,16 @@ nav .openMenu, .closeMenu, .icons i{
 }
 
 nav .logo{
-    margin: 20px;
     margin-left: 20px;
     font-size: 25px;
     cursor: pointer;
-    min-width:200px;
-    max-width:270px;
+    min-width:150px;
+    max-width:300px;
     display: flex;
 }
 
 
-@media(max-width: 1088px){
+@media(max-width: 800px){
     nav .mainMenu{
         height: 100vh;
         position: fixed;
@@ -91,7 +91,7 @@ nav .logo{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: white;
+        background: #ccff66;
         transition: top 1s ease;
         display: none;
     }
@@ -111,14 +111,7 @@ nav .logo{
     }
 }
 
-/* logo beuty */
-.degrade{
-    display: inline-block;
-    background-image: linear-gradient(to right,#ff0000,#0000ff);
-    background-size:auto;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    background-clip: text;
-    -moz-text-fill-color: transparent;
+#imgLogo{
+    max-width:300px;
+    min-width: 100px;
 }

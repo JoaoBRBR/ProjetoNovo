@@ -1,0 +1,5 @@
+Azul #18386a
+
+Verde #ccff66
+
+Branco #ffffff
