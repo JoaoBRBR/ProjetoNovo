@@ -262,11 +262,28 @@ nav .logo{
 .submission-form{
     min-width:500px;
     margin:2rem auto;
-    border:2px solid #E74C3C;
+    border:2px solid #473ce7;
     padding:2rem;
     border-radius:5px;
-    
-  }
+}
+
+.totalFinal{
+    width: 70%;
+    margin: auto;
+}
+
+@media screen and (max-width:700px){
+    .submission-form{
+        min-width:100%;
+        margin:0;
+        margin-bottom:20px;
+    }
+    .totalFinal{
+        width: 90%;
+        margin: auto;
+    }
+}
+
   label{
     display:block;
     padding:1rem 0 .25rem;
@@ -333,4 +350,19 @@ nav .logo{
     width: 100%;
     height: 50px;
     margin: 60px;
+}
+
+
+@media screen and (max-width:700px){
+    .grid1{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+    .grid1 div{
+        height: auto;
+        margin: 0px;
+    }
 }
