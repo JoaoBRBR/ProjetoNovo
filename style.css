@@ -17,6 +17,7 @@ html{
 
 body{
     background-color: var(--white);
+    overflow-x: hidden;
     font-family: "Poppins", sans-serif;
 }
 
@@ -42,6 +43,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 3;
 }
 
 nav .mainMenu {
@@ -95,7 +97,7 @@ nav .logo{
         top: 0;
         left: 0;
         right: 0;
-        z-index: 2;
+        z-index: 9999;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -130,16 +132,33 @@ nav .logo{
 /* paralax 1 */
 
 #banner{
-    background-image: url("assets/images/temp1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    text-align: center;
-    min-height: 500px;
-    height: 700px;
-    padding: 20px;
-    padding-top:200px;
+    margin-top: 70px;
+    position: relative;
+    
+}
+
+#banner video{
+    z-index: -1;
+}
+
+#audioBtn{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#audioLigado{
+    display: none;
+}
+#audioDesligado{
+    display: block;
+}
+
+#audioOn{
+    z-index: 2;
+    cursor: pointer;
+    display: none;
 }
 
 .parallaxA {
@@ -175,7 +194,9 @@ nav .logo{
     text-align: justify;
     padding: 50px 0px;
     margin: auto 10%;
-    font-weight: bold;
+}
+.textos h1{
+    margin-bottom:20px;
 }
 
 @media only screen and (max-device-width: 800px) {
@@ -233,10 +254,12 @@ nav .logo{
     .grade2 {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: px;
     }   
     .carro1{
         width: 50%;
-        margin-left:25%;
+        margin: auto;
     }
 }
 
@@ -258,71 +281,6 @@ nav .logo{
 
 
 
-
-.submission-form{
-    min-width:500px;
-    margin:2rem auto;
-    border:2px solid #473ce7;
-    padding:2rem;
-    border-radius:5px;
-}
-
-.totalFinal{
-    width: 70%;
-    margin: auto;
-}
-
-@media screen and (max-width:700px){
-    .submission-form{
-        min-width:100%;
-        margin:0;
-        margin-bottom:20px;
-    }
-    .totalFinal{
-        width: 90%;
-        margin: auto;
-    }
-}
-
-  label{
-    display:block;
-    padding:1rem 0 .25rem;
-    text-transform:uppercase;
-    font-size:14px;
-  }
-
-  input, textarea{
-    display:block;
-    width:100%;
-    border:2px solid #2980B9;
-    padding:.5rem;
-    font-size:18px;
-    border-radius:5px;
-  }
-
-  #sendBtn{
-    float: center;
-    border:0;
-    background:#343050;
-    padding:.5rem;
-    color:white;
-    margin:1rem auto;
-    width:auto;
-    text-transform:uppercase;
-    cursor:pointer;
-    transition:.3s ease;
-  }
-  #sendBtn:hover{
-    background:#3498DB;
-  }
-
-.formAreas{
-    width: 48%;
-    margin-bottom: 15px;
-}
-#message{
-    height: 100px;
-}
 
 .right{
     float:right;
@@ -365,4 +323,82 @@ nav .logo{
         height: auto;
         margin: 0px;
     }
+}
+
+
+
+
+.gradient-text {
+    display: inline-block;
+    background-image: linear-gradient(180deg, #aaff00, #18386a);
+    background-size:auto;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+
+
+
+.hiddenL{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.hiddenR{
+    opacity: 0;
+    transform: translateX(+100%);
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.anima1{
+    transition: all 0.7s;
+}
+.anima2{
+    transition: all 1s;
+}
+
+
+
+
+
+#faleconosco{
+    text-align: center;
+}
+
+#faleconosco form{
+    width: 90%;
+    margin: auto;
+}
+#faleconosco form input,textarea{
+    display: block;
+    width: 70%;
+    margin: auto;
+    background-color:rgb(241, 232, 232);
+    margin-bottom:10px;
+    border: 1px solid #18386a;
+    border-radius: 5px;
+}
+
+#faleconosco form input{
+    height: 40px
+}
+
+#faleconosco form label{
+    position: relative;
+    width: 100%;
+}
+
+#faleconosco .icone{
+    position: absolute;
+    top: 10px;
+    left: -80%;
+}
+
+#faleconosco form textarea{
+    height: 90px
 }
