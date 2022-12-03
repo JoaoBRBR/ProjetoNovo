@@ -64,3 +64,17 @@ const observerB = new IntersectionObserver((entries) => {
 });
 const hiddenElementsB = document.querySelectorAll('.hiddenR');
 hiddenElementsB.forEach((el) => observerB.observe(el));
+
+
+const observerC = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }else{
+            entry.target.classList.remove('show');
+        }
+    });
+});
+const hiddenElementsC = document.querySelectorAll('.hiddenImg');
+hiddenElementsC.forEach((el) => observerC.observe(el));

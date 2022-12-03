@@ -44,6 +44,7 @@ nav {
     left: 0;
     width: 100%;
     z-index: 3;
+    overflow: hidden;
 }
 
 nav .mainMenu {
@@ -58,7 +59,7 @@ nav .mainMenu li a{
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 nav .mainMenu li a:hover{
@@ -90,7 +91,7 @@ nav .logo{
 }
 
 
-@media(max-width: 800px){
+@media(max-width: 930px){
     nav .mainMenu{
         height: 100vh;
         position: fixed;
@@ -161,40 +162,14 @@ nav .logo{
     display: none;
 }
 
-.parallaxA {
-    /* The image used */
-    background-image: url("https://cdn-media-1.freecodecamp.org/images/wru4xpNDHyRR3JMz1eIvgtGAQHLjn-d8Cnui");
-
-    /* Set a specific height */
-    min-height: 300px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallaxB {
-    /* The image used */
-    background-image: url("https://anbc.org.br/wp-content/uploads/2015/12/placeholder.gif");
-
-    /* Set a specific height */
-    min-height: 300px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .textos{
     align-items: center;
     text-align: justify;
     padding: 50px 0px;
     margin: auto 10%;
+    overflow: hidden;
 }
+
 .textos h1{
     margin-bottom:20px;
 }
@@ -240,7 +215,12 @@ nav .logo{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 10px;
-    grid-row-gap: px;
+    grid-row-gap: 0px;
+    margin-bottom: 50px;
+}
+
+.grade2 div{
+    width: 100%;
 }
 
 .textsize{
@@ -250,33 +230,71 @@ nav .logo{
 .carro1{
     width:100%;
 }
+
 @media screen and (max-width:860px) {
     .grade2 {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
-        grid-row-gap: px;
+        grid-row-gap: 0px;
     }   
     .carro1{
         width: 50%;
         margin: auto;
     }
+
+    .textos{
+        align-items: center;
+    }
+    
+    .textos h1{
+        font-size:35px;
+    }
+    .textos p{
+        font-size:20px;
+        text-align: justify!important;
+    }
+    .textLeft{
+        text-align:center!important;
+    }
+    .textRight{
+        text-align:center!important;
+    }
+
+
+
+    .pagina2{
+        margin: auto;
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+        width: 98%;
+        text-align: center;
+        padding: 10px
+    }
+    
+    .pagina2 h1{
+        font-size:16px;
+    }
+    .pagina2 p{
+        font-size:12px;
+    }
 }
 
-#botao{
-    border: none;
-    padding: 12px;
+.botao{
+    border: none!important;
+    padding: 12px!important;
     border-radius: 10px;
     cursor: pointer;
-    font-size:1.2rem;
-    margin-top:20px;
-    background-color: #18386a;
-    color: #ccff66;
+    font-size:1.2rem!important;
+    margin-top:20px!important;
+    background-color: #18386a!important;
+    color: #ccff66!important;
     transition:ease 0.3s;
-}#botao:hover{
-    background-color: #6d8fc5;
-    color: #131c03;
-    transition:ease 0.3s;
+}
+.botao:hover{
+    background-color: #6d8fc5!important;
+    color: #131c03!important;
+    transition:ease 0.3s!important;
 }
 
 
@@ -296,36 +314,6 @@ nav .logo{
     text-align:right;
 }
 
-.grid1{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-}
-
-.grid1 div{
-    width: 100%;
-    height: 50px;
-    margin: 60px;
-}
-
-
-@media screen and (max-width:700px){
-    .grid1{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-    }
-    .grid1 div{
-        height: auto;
-        margin: 0px;
-    }
-}
-
-
 
 
 .gradient-text {
@@ -341,7 +329,6 @@ nav .logo{
 
 
 
-
 .hiddenL{
     opacity: 0;
     transform: translateX(-100%);
@@ -350,6 +337,10 @@ nav .logo{
     opacity: 0;
     transform: translateX(+100%);
 }
+.hiddenImg{
+    opacity: 0;
+}
+
 .show{
     opacity: 1;
     transform: translateX(0);
@@ -361,7 +352,9 @@ nav .logo{
 .anima2{
     transition: all 1s;
 }
-
+.anima3{
+    transition: all 2.3s;
+}
 
 
 
@@ -382,10 +375,12 @@ nav .logo{
     margin-bottom:10px;
     border: 1px solid #18386a;
     border-radius: 5px;
+    padding-left: 20px;
+    font-size: 17px;
 }
 
 #faleconosco form input{
-    height: 40px
+    height: 40px;
 }
 
 #faleconosco form label{
@@ -396,9 +391,180 @@ nav .logo{
 #faleconosco .icone{
     position: absolute;
     top: 10px;
-    left: -80%;
+    left: -68%;
 }
 
 #faleconosco form textarea{
     height: 90px
+}
+.icone{
+    transition: all 1s;
+}
+#first-name:focus ~ #iconePessoa{
+    transform: translateX(-20px);
+    transition: all 1s;
+}
+#phone:focus ~ #iconePhone{
+    transform: translateX(-20px);
+    transition: all 1s;
+}
+#email:focus ~ #iconeEmail{
+    transform: translateX(-20px);
+    transition: all 1s;
+}
+
+
+
+@media screen and (max-width: 600px){
+    #faleconosco form{
+        width: 100%;
+        margin: auto;
+    }
+    #faleconosco form input,textarea{
+        width: 100%;
+    }
+    #faleconosco .icone{
+        left: -98%;
+    }
+}
+
+
+
+#qrbtn{
+    display: grid;
+    justify-content: center;
+}
+#qrbtn img{
+    margin: auto;
+}
+
+#sendBtn{
+    width: 50%!important;
+}
+
+
+
+/*
+
+.parallaxA {
+    background-image: url("https://cdn-media-1.freecodecamp.org/images/wru4xpNDHyRR3JMz1eIvgtGAQHLjn-d8Cnui");
+    min-height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxB {
+    background-image: url("https://anbc.org.br/wp-content/uploads/2015/12/placeholder.gif");
+    min-height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+
+
+
+
+
+/*      //////////////Footer//////////////        */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container{
+    max-width:1000px;
+    margin: auto;
+}
+.footer{
+    background-color: #18386a;
+    padding: 70px 0;
+}
+.footerCol{
+    width: 25%;
+    padding: 0 15px;
+}
+.footerCol h4{
+    font-size:18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.footerCol ul li:not(:last-child){
+    margin-bottom:10px;
+}
+
+.footerCol ul li a{
+    font-size: 16px;
+    color: #bbb;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s;
+}
+.footerCol ul li a:hover{
+    color: #fff;
+    padding-left: 10px;
+}
+
+.social h4{
+    margin-left: 20px;
+}
+
+.social a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    line-height: 40px;
+    border-radius:50%;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.social a:hover{
+    color: rgba(0, 34, 255, 1);
+    background-color: #fff;
+}
+
+
+@media(max-width: 731px) {
+    .footerCol{
+        width: 50%;
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width: 450px) {
+    .footerCol{
+        width: 100%;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.esg img{
+    width: 50px;
+    height: 50px;
+    border-radius:25%;
+}
+
+
+
+.pagina2{
+    margin: auto;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    width: 90%;
+    text-align: justify;
+    padding: 10px
+}
+
+.pagina2 h1{
+    margin: 50px auto;
+    text-align: center !important;
+    color: #18386a !important;
 }
