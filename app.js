@@ -78,3 +78,15 @@ const observerC = new IntersectionObserver((entries) => {
 });
 const hiddenElementsC = document.querySelectorAll('.hiddenImg');
 hiddenElementsC.forEach((el) => observerC.observe(el));
+
+//imagem slide
+
+
+var counter = 1;
+setInterval(function(){
+    document.getElementById("radio"+counter).checked = true;
+    counter++;
+    if(counter>4){
+        counter = 1;
+    }
+},4000);
