@@ -219,6 +219,16 @@ nav .logo{
     margin-bottom: 50px;
 }
 
+/*para as partes onde a imagem aparece a esquerda mas depois inverte*/
+.casoInverte{
+    grid-auto-flow: dense;
+    direction: rtl;
+}
+.naoInverte{
+    grid-auto-flow: dense;
+    direction: ltr;
+}
+
 .grade2 div{
     width: 100%;
 }
@@ -234,12 +244,13 @@ nav .logo{
 @media screen and (max-width:860px) {
     .grade2 {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        grid-template-rows: repeat(2, auto);
+        align-items: start;
+        justify-content:center;
     }   
-    .carro1{
-        width: 50%;
+
+    .grade2 .img{
+        width:70%;
         margin: auto;
     }
 
@@ -277,6 +288,13 @@ nav .logo{
     }
     .pagina2 p{
         font-size:12px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .grade2 .img{
+        width:90%;
+        margin: auto;
     }
 }
 
