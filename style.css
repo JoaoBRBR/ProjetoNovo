@@ -637,3 +637,30 @@ nav .logo{
 #radio4:checked ~ .first{
     margin-left: -300%;
 }
+
+
+@media(max-width: 678px) {
+    .slider{
+        width: 300px!important;
+        height: 300px!important;
+    }
+    .slides{
+        height: 300px;
+    }
+    .slide img{
+        width: 300px;
+    }
+}
+
+@media(max-width: 430px) {
+    .slider{
+        width: 200px!important;
+        height: 200px!important;
+    }
+    .slides{
+        height: 200px;
+    }
+    .slide img{
+        width: 200px;
+    }
+}
